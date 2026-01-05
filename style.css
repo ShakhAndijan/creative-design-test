@@ -227,6 +227,20 @@ body {
   padding: 1rem 1rem 2rem 1rem;
   box-shadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
   position: relative;
+  opacity: 0.7;
+  transition: opacity 0.5s;
+}
+
+.team-member:hover {
+  opacity: 1;
+}
+
+.team-member:first-child {
+  align-self: start;
+}
+
+.team-member:last-child {
+  align-self: flex-end;
 }
 
 .team-member-img {
@@ -278,6 +292,11 @@ body {
   padding: 0.5rem;
   cursor: pointer;
   z-index: 50;
+  transition: transform 0.5s;
+}
+
+.change.story-btn {
+  transform: rotate(405deg);
 }
 
 .story-btn-line {
@@ -299,6 +318,14 @@ body {
   align-items: center;
   padding: 2rem;
   transform: scale(0);
+  transform-origin: top right;
+  border-radius: 50rem 0 50rem 50rem;
+  transition: all 0.5s;
+}
+
+.change.story {
+  transform: scale(1);
+  border-radius: 0;
 }
 
 .story-heading {
